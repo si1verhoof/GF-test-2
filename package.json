@@ -1,0 +1,19 @@
+{
+  "name": "gf-test-2",
+  "version": "1.0.0",
+  "description": "Тестовое задание на вёрстку #2: Лендинг",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/si1verhoof/GF-test-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/si1verhoof/GF-test-2/issues"
+  },
+  "homepage": "https://github.com/si1verhoof/GF-test-2#readme"
+}
