@@ -1,0 +1,94 @@
+.main-footer {
+    background-color: @bg-color-green;
+    width: 100%;
+    height: 443px;
+    color: @bg-color;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-footer .site-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-footer__title {
+    font-size: 48px;
+    line-height: 60px;
+    font-family: "Roboto Light";
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 98px;
+    margin-bottom: 25px;
+}
+
+.main-footer__text {
+    font-size: 18px;
+    line-height: 32px;
+    font-family: "Roboto Light";
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 53px;
+}
+
+.main-footer__btn {
+    background-color: @bg-color;
+    color: @bg-color-green;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px 92px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* parallax */ 
+
+.main-footer__parallax {
+    position: absolute;
+
+    &--tomato {
+        width: 285px;
+        height: 291px;
+        top: 93px;
+        left: -50px;
+        background-image: url("../img/footer/tomato.png");
+    }
+
+    &--pepper {
+        width: 151px;
+        height: 168px;
+        top: 96px;
+        left: 297px;
+        background-image: url("../img/footer/pepper.png");
+    }
+
+    &--strawberry {
+        width: 111px;
+        height: 134px;
+        top: 346px;
+        left: 460px;
+        background-image: url("../img/footer/strawberry.png");
+        z-index: -1;
+    }
+
+    &--banana {
+        width: 230px;
+        height: 188px;
+        top: 40px;
+        right: 263px;
+        background-image: url("../img/footer/banana.png");
+    }
+
+    &--apple {
+        width: 305px;
+        height: 411px;
+        top: 100px;
+        right: -100px;
+        background-image: url("../img/footer/apple.png");
+    }
+}

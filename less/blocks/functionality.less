@@ -1,0 +1,232 @@
+.functionality .site-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100%    ;
+}
+
+.functionality {
+    height: 900px;
+}
+
+/* блок с ионками */
+
+.functionality__circle {
+    width: 469px;
+    height: 469px;
+    position: relative;
+    border: 1px solid @bg-color-grey;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+}
+
+.functionality__img {
+    position: absolute;
+    left: -135px;
+    top: -120px;
+    background-image: url("../img/section-2/phone-growth.png");
+    width: 443px;
+    height: 784px;
+}
+
+.functionality__item {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: @bg-color-grey;
+    display: flex;
+    border: 2px solid white;
+}
+
+/* Положение иконок */
+
+/* 1 */
+
+.functionality__circle--growth-checked .functionality__item {
+    &--sound {
+        right: 110px;
+        top: -10px;
+    }
+
+    &--days {
+        top: 70px;
+        right: 10px;
+    }
+
+    &--growth {
+        right: -45px;
+        top: 190px;
+        width: 90px;
+        height: 90px;
+        background-color: @bg-color-green;
+    }
+
+    &--favorite {
+        right: 10px;
+        bottom: 70px;
+    }
+
+    &--interface {
+        right: 110px;
+        bottom: -10px;
+    }
+}
+
+/* 2 */
+
+.functionality__circle--sound-checked .functionality__item {
+    &--growth {
+        right: 110px;
+        top: -10px;
+    }
+
+    &--days {
+        top: 70px;
+        right: 10px;
+    }
+
+    &--sound {
+        right: -45px;
+        top: 190px;
+        width: 90px;
+        height: 90px;
+        background-color: @bg-color-green;
+    }
+
+    &--favorite {
+        right: 10px;
+        bottom: 70px;
+    }
+
+    &--interface {
+        right: 110px;
+        bottom: -10px;
+    }
+}
+
+/* 3 */
+
+.functionality__circle--days-checked .functionality__item {
+    &--growth {
+        right: 110px;
+        top: -10px;
+    }
+
+    &--sound {
+        top: 70px;
+        right: 10px;
+    }
+
+    &--days {
+        right: -45px;
+        top: 190px;
+        width: 90px;
+        height: 90px;
+        background-color: @bg-color-green;
+    }
+
+    &--favorite {
+        right: 10px;
+        bottom: 70px;
+    }
+
+    &--interface {
+        right: 110px;
+        bottom: -10px;
+    }
+}
+
+/* 4 */
+
+.functionality__circle--favorite-checked .functionality__item {
+    &--growth {
+        right: 110px;
+        top: -10px;
+    }
+
+    &--sound {
+        top: 70px;
+        right: 10px;
+    }
+
+    &--favorite {
+        right: -45px;
+        top: 190px;
+        width: 90px;
+        height: 90px;
+        background-color: @bg-color-green;
+    }
+
+    &--days {
+        right: 10px;
+        bottom: 70px;
+    }
+
+    &--interface {
+        right: 110px;
+        bottom: -10px;
+    }
+}
+
+/* 5 */
+
+.functionality__circle--interface-checked .functionality__item {
+    &--growth {
+        right: 110px;
+        top: -10px;
+    }
+
+    &--sound {
+        top: 70px;
+        right: 10px;
+    }
+
+    &--interface {
+        right: -45px;
+        top: 190px;
+        width: 90px;
+        height: 90px;
+        background-color: @bg-color-green;
+    }
+
+    &--days {
+        right: 10px;
+        bottom: 70px;
+    }
+
+    &--favorite {
+        right: 110px;
+        bottom: -10px;
+    }
+}
+
+/* end */
+
+.functionality__icon {
+    margin: auto;
+    &--favorite {
+        margin-top: 19px;
+    }
+}
+
+/* текстовый блок */
+
+.functionality__text-block {
+    margin: auto 0;
+    font-weight: 300;
+}
+
+.functionality__title {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.functionality__text {
+    font-size: 18px;
+    line-height: 32px;
+}

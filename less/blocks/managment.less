@@ -1,0 +1,132 @@
+.managment .site-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.managment {
+    height: 700px;
+}
+
+.managment__text-block {
+    margin: auto 0;
+}
+
+.managment__title {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.managment__text {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+/* slider */
+
+.managment__slider-block {
+    margin: auto 0;
+}
+
+.managment__slide {
+    display: flex;
+    flex-direction: row;
+    width: 421px;
+    height: 110px;
+    border-radius: 5px;
+    border: 2px solid @bg-color-grey;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    &--middle {
+    margin-top: 31px;
+    margin-bottom: 31px;
+    height: 135px;
+    width: 525px;
+    }
+}
+
+.managment__slider {
+    &-text-block {
+        padding: 20px 0;
+    }
+
+    &-img {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
+    }
+
+    &-title {
+        font-size: 15.68px;
+        line-height: 22.4px;
+        color: @bg-color-green;
+        font-weight: 700;
+    }
+
+    &-text {
+        font-size: 12.32px;
+        line-height: 15.8px;
+        font-weight: 300;
+    }
+
+    &-stat {
+        font-size: 12.32px;
+        line-height: 22.4px;
+        font-weight: 700;
+        color: @bg-color-green;
+    }
+}
+
+.managment__slider-time {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 70px;
+    margin-right: 16px;
+    font-size: 24.64px;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: @bg-color-green;
+    line-height: 18px;
+
+    &-meridiem {
+        color: @color-grey;
+        font-size: 15.68px;
+    }
+}
+
+.managment__slide--apple .managment__slider-time {
+    color: @color-grey;
+}
+
+.managment__slide--middle .managment__slider {
+    &-title {
+        font-size: 19.6px;
+        line-height: 28px;
+    }
+
+    &-text {
+        font-size: 15.4px;
+        line-height: 21px;
+    }
+
+    &-stat {
+        font-size: 15.4px;
+        line-height: 28px;
+    }
+
+    &-time {
+        margin-left: 90px;
+        margin-right: 21px;
+        font-size: 30.8px;
+        text-align: right;
+    }
+
+    &-time-meridiem {
+        font-size: 19.6px;
+    }
+}
