@@ -27,7 +27,6 @@
     position: absolute;
     left: -126px;
     top: -124px;
-    background-image: url("../img/section-2/phone-growth.png");
     width: 443px;
     height: 784px;
 }
@@ -86,6 +85,11 @@
     &--growth {
         right: 110px;
         top: -12px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &--days {
@@ -99,6 +103,11 @@
         width: 88px;
         height: 88px;
         background-color: @bg-color-green;
+
+        svg {
+            width: 32px;
+            height: 36px;
+        }
     }
 
     &--favorite {
@@ -118,6 +127,11 @@
     &--growth {
         right: 110px;
         top: -12px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &--sound {
@@ -131,6 +145,11 @@
         width: 88px;
         height: 88px;
         background-color: @bg-color-green;
+
+        svg {
+            width: 30px;
+            height: 36px;
+        }
     }
 
     &--favorite {
@@ -150,6 +169,11 @@
     &--growth {
         right: 110px;
         top: -12px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &--sound {
@@ -163,6 +187,12 @@
         width: 88px;
         height: 88px;
         background-color: @bg-color-green;
+
+        svg {
+            width: 36px;
+            height: 34px;
+            margin-top: 30px;
+        }
     }
 
     &--days {
@@ -182,6 +212,11 @@
     &--growth {
         right: 110px;
         top: -12px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
     }
 
     &--sound {
@@ -195,6 +230,11 @@
         width: 88px;
         height: 88px;
         background-color: @bg-color-green;
+
+        svg {
+            width: 36px;
+            height: 34px;
+        }
     }
 
     &--days {
@@ -246,4 +286,35 @@
     &--spacing {
         letter-spacing: 0.5px;
     }
+}
+
+.functionality__text-block--growth--hidden,
+.functionality__text-block--sound--hidden,
+.functionality__text-block--days--hidden,
+.functionality__text-block--favorite--hidden,
+.functionality__text-block--interface--hidden {
+    display: none;
+}
+
+.functionality__img--growth {
+    background-image: url("../img/section-2/phone-growth.png");
+}
+
+.functionality__img--sound {
+    background-image: url("../img/section-2/phone-sound.png");
+}
+
+.functionality__img--days {
+    background-image: url("../img/section-2/phone-days.png");
+}
+
+.functionality__img--favorite {
+    background-image: url("../img/section-2/phone-favorite.png");
+    background-repeat: no-repeat;
+    left: -89px;
+    top: -126px;
+}
+
+.functionality__img--interface {
+    background-image: url("../img/section-2/phone-interface.png");
 }

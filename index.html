@@ -1,248 +1,342 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Тестовое задание: GoodFactory #2</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link href="http://allfont.ru/allfont.css?fonts=roboto-light" rel="stylesheet" type="text/css" />
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <svg style="display:none">
-            <symbol id="icon-google" viewBox="0 0 137 46">
-                <image id="Google_Play" data-name="Google Play" width="137" height="46" xlink:href="data:img/png;base64,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"/>
-            </symbol>
-            <symbol id="icon-apple" viewBox="0 0 130 46">
-                <image id="Appstore" width="130" height="46" xlink:href="data:img/png;base64,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"/>
-            </symbol>
-            <symbol id="icon-sound" viewBox="0 0 23 26">
-                <image id="sound" width="23" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAQAAAD2vQ/1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCSrN44AYAAAA4UlEQVQ4y+WUrW4CQRRGvynpBko1IWn4EU2qIKlCrMA3WEAjUCjegDcAjUZU1xXBi9RUl0IwpIKWU7E0DDvL7qJ7Rsxk7rk3N5PMFXLWI29sGUZEFHHFHIA9BTd2pTDXKkmSjO7lcpJdZMyaP354xT/fTMtSj0zIROktvolmhgnrZTacpx/Wp8TxQc7Ws3wRT9d+yIayiqcZbIF+pyQqtu4l6nlbT80/0z21E726apIkbnghDUtqSCxSyUHCg4ELWu8Zqhfon8Yp/qTO4fSukZPgDAff+qWp5syAFTueuXVjv4cooSJ1br6oAAAAAElFTkSuQmCC"/>
-            </symbol>
-            <symbol id="icon-days" viewBox="0 0 26 28">
-                <image id="days" width="26" height="28" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcCAQAAADVGmdYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCDu+SJGrAAABNklEQVQ4y8WUu0oDQRSGv02igtVWIlYKNr6CWFgIooJahDyCYKHEZ7AVBEHrtbASxMZGm1jYiGJaLySCKRRBVhslJPktMnuRXXB3Ff1PcS5zPubCzCCMzaiuhop+HraSGqppysuDgbok6UVWBMnrTZJ0HYU82RHINiOuVykwyCpDBNqhyVf1Gt+PAzywhc6VVmeWRFoplxoBKwtEJqhg/BrVBN0TrIehKpUEkP0LywOYZhmAI3bZowdoUmKJWQC2OYmDxlgAwGWfol8dN9VKAP39kQMccA/ALa/MkwdawAaHAFzGz9Q2voVM3AY6ptoJdZqbOylUNrHjvyAJOSYqCy12w/85iDtOAbjgnWP6gA/gimEAbuL39L39ZE/e8kZxE3SPdF2WP4Icz6mZR0tzbDKQAnli5RNMfBTkSluKAgAAAABJRU5ErkJggg=="/>
-            </symbol>
-            <symbol id="icon-growth" viewBox="0 0 36 36">
-                <image id="growth" width="36" height="36" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTBxnssMyAAAABYUlEQVRIx+2VPS9DYRSAH/2ISFCjj6SEAYt0kEgnSUeL6Rr8BD/BIEQi3WwGErFZLWJAOigjlSZE4qOL4ZKgQaLS9hh6e71NL27fNwaJ5y7nnPfkuee8d7gImk9QlmRfrGquq0GSIiJSkoSZaFKq2NKjLxqQR/nkUMJ6ohbJSC3LeqJ1qcdqXBMXLx4CNIrNnUc1q7NaSDokrUyTlIjQ+ERQ5Imikr+RR0vkSchnXxv9NJHn5qsGfxNZ3JPhhGu2CZqIFml2ognGTUSdStxuIvLBr361CLMMAq9ssGsiWmHaiaYY5lJ/tbjymjGTO1JrYRORFgGG2OKKHCkSJqIQm8QA6GWUbp71J4q5cSsjJqup+L7an0QG/Iv+vqhQd14GoPSto1wRZdzCC1kAzpWmyumxmwsXADW/pVOA4HyKKAVszphxmtJEeccmxwI7ABzQRwGbHHPsAXBEF4LNLWusAnwAHlGQK0UasfIAAAAASUVORK5CYII="/>
-            </symbol>
-            <symbol id="icon-favorite" viewBox="0 0 28 27">
-                <image id="favorite" width="28" height="27" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAQAAADFASenAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCBAS9GjrAAABOElEQVQ4y53TPWoCURTF8fMeDEkgwcIiEpF8FAEXMJgVCKaQgMuYHbgJS3eRDdilEExnlwQLJYWmkCCCES3+KUYzjjMTnTm3vOdXPHjXoE2MSrrRhdb60od+FORM97qUo7mG+tQW4E+DAUGWtMkjRJ42y53NgIYvhDC0iGaMi8s4ZtPC+LBJfGbMEjZNZLjVuxyly1rXVl5qJjl6snpMzSTpweouE7yyOskEHavvTHBu9ZoJvlk9Z4IvhnMNlU/JpioJ4ZE2nv/lLJ1UrINlcx0FJkezCYXtdQjhsjiKLXCDs/KnxuogW1Hb9gMo6gfoinrQ3oX/0xDbh6Ka8NYF1XBzH4oK0wibUtnvRaEoMwqxEeVoKw6KIv0/1qcY14mHIkcPgB65+EYSFDm6dJMYMiTfwKmkZdLyF73hyWYCMS0mAAAAAElFTkSuQmCC"/>
-            </symbol>
-            <symbol id="icon-interface" viewBox="0 0 26 24">
-                <image id="interface" width="26" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAQAAABOiyVOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCRV7ha0lAAAAcUlEQVQ4y+2RMQ5AQBREH9lKI3E3jiEOoZaQkOg4jeuobDRGwyYatlLtq6Z5+ZM/kRI6CjZ6agQ0ZLyzoUk3pRBa9QnaXV58pZjDnRWexMwuz76SocKSYxkYAWhJPxwbeXd61PtLMoRxr0eEcSGM67An4i5VEmJFAoEAAAAASUVORK5CYII="/>
-            </symbol>
-        </svg>
-        <section class="promo">
-            <div class="site-wrapper">
-                <header class="page-header">
-                    <h1 class="visually-hidden">
-                      Тестовое задание на вёрстку Goodfactory #2
-                    </h1>
-                    <a class="page-header__logo-link">
-                        FitApp
-                    </a>
-                    <nav class="page-header__menu main-nav">
-                        <ul class="main-nav__list">
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">
-                                    About
-                                </a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">
-                                    Features
-                                </a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">
-                                    Reviews
-                                </a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">
-                                    Blog
-                                </a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="#" class="main-nav__link">
-                                    Support
-                                </a>
-                            </li>
-                            <li class="main-nav__item main-nav__item--btn">
-                                <a href="#" class="main-nav__link main-nav__link--btn">
-                                    Get app
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
-                <div class="promo__content">
-                    <img src="img/section-1/logo.png" class="promo__content-logo" width="209" height="209" title="Лого" alt="Лого">
-                    <h3 class="promo__title">
-                        Helps you eat <span class="text-bold">better.</span>
-                    </h3>
-                    <p class="promo__text">
-                        FitApp is a free calorie counting and diet app PSD template which<br/>
-                        includes high quality 9 screens. This template can be very helpful if you're<br/>
-                        planning to build food tracking application.
-                    </p>
-                    <div class="promo__logo-section">
-                        <svg width="130" height="46" class="promo__logo promo__logo--appstore"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-apple"></use></svg>
-                        <svg width="137" height="46" class="promo__logo promo__logo--appstore"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google"></use></svg>
-                    </div>
-                    <img src="img/section-1/phone.png" width="1946" height="875" class="promo__content-img">
-                    <div class="promo__parallax promo__parallax--apple"></div>
-                    <div class="promo__parallax promo__parallax--banana"></div>
-                    <div class="promo__parallax promo__parallax--tomato"></div>
-                    <div class="promo__parallax promo__parallax--lilApple"></div>
-                </div>
-            </div>
-        </section>
-        <div class="promo__parallax promo__parallax--strawberry"></div>
-        <section class="functionality">
-            <div class="site-wrapper">
-                <div class="functionality__circle functionality__circle--growth-checked">
-                    <div class="functionality__img" alt="Growth-interface"></div>
-                    <div class="functionality__item functionality__item--sound">
-                        <svg width="23" height="26" class="functionality__icon functionality__icon--sound"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-sound"></use></svg>
-                    </div>
-                    <div class="functionality__item functionality__item--days">
-                        <svg width="26" height="28" class="functionality__icon functionality__icon--days"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-days"></use></svg>
-                    </div>
-                    <div class="functionality__item functionality__item--growth">
-                        <svg width="36" height="36" class="functionality__icon functionality__icon--growth"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-growth"></use></svg>
-                    </div>
-                    <div class="functionality__item functionality__item--favorite">
-                        <svg width="28" height="27" class="functionality__icon functionality__icon--favorite"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-favorite"></use></svg>
-                    </div>
-                    <div class="functionality__item functionality__item--interface">
-                        <svg width="26" height="24" class="functionality__icon functionality__icon--interface"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-interface"></use></svg>
-                    </div>
-                </div>
-                <div class="functionality__text-block">
-                    <h3 class="functionality__title">
-                        Best calorie <span class="text-green">counter app!</span>
-                    </h3>
-                    <p class="functionality__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br/>
-                        sed do eiusmod tempor incididunt ut labore et dolore<br/>
-                        <span class="functionality__text--spacing">magna aliqua. Ut enim ad minim veniam.</span>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="planning">
-            <div class="site-wrapper">
-                <h3 class="planning__title">
-                    A simple way to <span class="text-green">plan your diet!</span>
-                </h3>
-                <p class="planning__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et<br/>
-                    dolore magna aliqua. Ut enim ad minim veniam.
-                </p>
-                <img src="img/section-3/phone-left.png" width="332" height="588" class="planning__img planning__img--left">
-                <img src="img/section-3/phone-middle.png" width="443" height="784" class="planning__img planning__img--middle">
-                <img src="img/section-3/phone-right.png" width="332" height="588" class="planning__img planning__img--right">
-                <div class="planning__parallax planning__parallax--pepper"></div>
-                <div class="planning__parallax planning__parallax--apple"></div>
-                <div class="planning__parallax planning__parallax--banana"></div>
-                <div class="planning__parallax planning__parallax--strawberry"></div>
-            </div>
-        </section>
-        <section class="managment">
-            <div class="site-wrapper">
-                <div class="managment__text-block">
-                    <h3 class="managment__title">
-                        Manage your <span class="text-green">meal time</span>
-                    </h3>
-                    <p class="managment__text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br/>
-                        sed do eiusmod tempor incididunt ut labore et dolore<br/>
-                        <span class="managment__text--spacing">magna aliqua. Ut enim ad minim veniam.</span>
-                    </p>
-                </div>
-                <div class="managment__slider-block">
-                    <div class="managment__slide managment__slide--apple managment__slide--top">
-                        <img class="managment__slider-img" src="img/section-4/apples.png" width="95" height="56" alt="apples">
-                        <div class="managment__slider-text-block">
-                            <p class="managment__slider-title">
-                                Apple
-                            </p>
-                            <p class="managment__slider-text">
-                                Lorem ipsum dolor sit
-                            </p>
-                            <p class="managment__slider-stat">
-                                35 G&ensp; <span class="text-grey">&bull;</span>&ensp;189 kcal
-                            </p>
-                        </div>
-                        <div class="managment__slider-time">
-                            01:00<br/>
-                            <span class="managment__slider-time-meridiem">
-                                pm
-                            </span>
-                        </div>
-                    </div>
-                    <div class="managment__slide managment__slide--sandwich managment__slide--middle">
-                        <img class="managment__slider-img" src="img/section-4/sandwich.png" width="138" height="102" alt="sandwich">
-                        <div class="managment__slider-text-block">
-                            <p class="managment__slider-title">
-                                Sandwich
-                            </p>
-                            <p class="managment__slider-text">
-                                Lorem ipsum dolor sit
-                            </p>
-                            <p class="managment__slider-stat">
-                                35 G&ensp; <span class="text-grey">&bull;</span>&ensp;189 kcal
-                            </p>
-                        </div>
-                        <div class="managment__slider-time">
-                            03:00<br/>
-                            <span class="managment__slider-time-meridiem">
-                                pm
-                            </span>
-                        </div>
-                    </div>
-                    <div class="managment__slide managment__slide--salad managment__slide--bottom">
-                        <img class="managment__slider-img" src="img/section-4/salad.png" width="112" height="62" alt="salad">
-                        <div class="managment__slider-text-block">
-                            <p class="managment__slider-title">
-                            Salad with chicken
-                            </p>
-                            <p class="managment__slider-text">
-                                Lorem ipsum dolor sit
-                            </p>
-                            <p class="managment__slider-stat">
-                                220 G&ensp; <span class="text-grey">&bull;</span>&ensp;189 kcal
-                            </p>
-                        </div>
-                        <div class="managment__slider-time">
-                            05:30<br/>
-                            <span class="managment__slider-time-meridiem">
-                                pm
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="main-footer">
-            <div class="site-wrapper">
-                <h3 class="main-footer__title">
-                    Download, customize & <span class="text-bold">enjoy!</span>
-                </h3>
-                <p class="main-footer__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et<br/>
-                    <span class="main-footer__text--spaced">dolore magna aliqua. Ut enim ad minim veniam.</span>
-                </p>
-                <a href="#" class="main-footer__btn">
-                    Get app
+
+<head>
+    <title>Тестовое задание: GoodFactory #2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="http://allfont.ru/allfont.css?fonts=roboto-light" rel="stylesheet" type="text/css" />
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <svg style="display:none">
+        <symbol id="icon-google" viewBox="0 0 137 46">
+            <image id="Google_Play" data-name="Google Play" width="137" height="46"
+                xlink:href="data:img/png;base64,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" />
+        </symbol>
+        <symbol id="icon-apple" viewBox="0 0 130 46">
+            <image id="Appstore" width="130" height="46"
+                xlink:href="data:img/png;base64,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" />
+        </symbol>
+        <symbol id="icon-sound" viewBox="0 0 23 26">
+            <image id="sound" width="23" height="26"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAQAAAD2vQ/1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCSrN44AYAAAA4UlEQVQ4y+WUrW4CQRRGvynpBko1IWn4EU2qIKlCrMA3WEAjUCjegDcAjUZU1xXBi9RUl0IwpIKWU7E0DDvL7qJ7Rsxk7rk3N5PMFXLWI29sGUZEFHHFHIA9BTd2pTDXKkmSjO7lcpJdZMyaP354xT/fTMtSj0zIROktvolmhgnrZTacpx/Wp8TxQc7Ws3wRT9d+yIayiqcZbIF+pyQqtu4l6nlbT80/0z21E726apIkbnghDUtqSCxSyUHCg4ELWu8Zqhfon8Yp/qTO4fSukZPgDAff+qWp5syAFTueuXVjv4cooSJ1br6oAAAAAElFTkSuQmCC" />
+        </symbol>
+        <symbol id="icon-days" viewBox="0 0 26 28">
+            <image id="days" width="26" height="28"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcCAQAAADVGmdYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCDu+SJGrAAABNklEQVQ4y8WUu0oDQRSGv02igtVWIlYKNr6CWFgIooJahDyCYKHEZ7AVBEHrtbASxMZGm1jYiGJaLySCKRRBVhslJPktMnuRXXB3Ff1PcS5zPubCzCCMzaiuhop+HraSGqppysuDgbok6UVWBMnrTZJ0HYU82RHINiOuVykwyCpDBNqhyVf1Gt+PAzywhc6VVmeWRFoplxoBKwtEJqhg/BrVBN0TrIehKpUEkP0LywOYZhmAI3bZowdoUmKJWQC2OYmDxlgAwGWfol8dN9VKAP39kQMccA/ALa/MkwdawAaHAFzGz9Q2voVM3AY6ptoJdZqbOylUNrHjvyAJOSYqCy12w/85iDtOAbjgnWP6gA/gimEAbuL39L39ZE/e8kZxE3SPdF2WP4Icz6mZR0tzbDKQAnli5RNMfBTkSluKAgAAAABJRU5ErkJggg==" />
+        </symbol>
+        <symbol id="icon-growth" viewBox="0 0 36 36">
+            <image id="growth" width="36" height="36"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTBxnssMyAAAABYUlEQVRIx+2VPS9DYRSAH/2ISFCjj6SEAYt0kEgnSUeL6Rr8BD/BIEQi3WwGErFZLWJAOigjlSZE4qOL4ZKgQaLS9hh6e71NL27fNwaJ5y7nnPfkuee8d7gImk9QlmRfrGquq0GSIiJSkoSZaFKq2NKjLxqQR/nkUMJ6ohbJSC3LeqJ1qcdqXBMXLx4CNIrNnUc1q7NaSDokrUyTlIjQ+ERQ5Imikr+RR0vkSchnXxv9NJHn5qsGfxNZ3JPhhGu2CZqIFml2ognGTUSdStxuIvLBr361CLMMAq9ssGsiWmHaiaYY5lJ/tbjymjGTO1JrYRORFgGG2OKKHCkSJqIQm8QA6GWUbp71J4q5cSsjJqup+L7an0QG/Iv+vqhQd14GoPSto1wRZdzCC1kAzpWmyumxmwsXADW/pVOA4HyKKAVszphxmtJEeccmxwI7ABzQRwGbHHPsAXBEF4LNLWusAnwAHlGQK0UasfIAAAAASUVORK5CYII=" />
+        </symbol>
+        <symbol id="icon-favorite" viewBox="0 0 28 27">
+            <image id="favorite" width="28" height="27"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAQAAADFASenAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCBAS9GjrAAABOElEQVQ4y53TPWoCURTF8fMeDEkgwcIiEpF8FAEXMJgVCKaQgMuYHbgJS3eRDdilEExnlwQLJYWmkCCCES3+KUYzjjMTnTm3vOdXPHjXoE2MSrrRhdb60od+FORM97qUo7mG+tQW4E+DAUGWtMkjRJ42y53NgIYvhDC0iGaMi8s4ZtPC+LBJfGbMEjZNZLjVuxyly1rXVl5qJjl6snpMzSTpweouE7yyOskEHavvTHBu9ZoJvlk9Z4IvhnMNlU/JpioJ4ZE2nv/lLJ1UrINlcx0FJkezCYXtdQjhsjiKLXCDs/KnxuogW1Hb9gMo6gfoinrQ3oX/0xDbh6Ka8NYF1XBzH4oK0wibUtnvRaEoMwqxEeVoKw6KIv0/1qcY14mHIkcPgB65+EYSFDm6dJMYMiTfwKmkZdLyF73hyWYCMS0mAAAAAElFTkSuQmCC" />
+        </symbol>
+        <symbol id="icon-interface" viewBox="0 0 26 24">
+            <image id="interface" width="26" height="24"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAQAAABOiyVOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBwUTCRV7ha0lAAAAcUlEQVQ4y+2RMQ5AQBREH9lKI3E3jiEOoZaQkOg4jeuobDRGwyYatlLtq6Z5+ZM/kRI6CjZ6agQ0ZLyzoUk3pRBa9QnaXV58pZjDnRWexMwuz76SocKSYxkYAWhJPxwbeXd61PtLMoRxr0eEcSGM67An4i5VEmJFAoEAAAAASUVORK5CYII=" />
+        </symbol>
+    </svg>
+    <section class="promo">
+        <div class="site-wrapper">
+            <header class="page-header">
+                <h1 class="visually-hidden">
+                    Тестовое задание на вёрстку Goodfactory #2
+                </h1>
+                <a class="page-header__logo-link">
+                    FitApp
                 </a>
-                <div class="main-footer__parallax main-footer__parallax--tomato"></div>
-                <div class="main-footer__parallax main-footer__parallax--pepper"></div>
-                <div class="main-footer__parallax main-footer__parallax--strawberry"></div>
-                <div class="main-footer__parallax main-footer__parallax--banana"></div>
-                <div class="main-footer__parallax main-footer__parallax--apple"></div>
+                <nav class="page-header__menu main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                About
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Features
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Reviews
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Support
+                            </a>
+                        </li>
+                        <li class="main-nav__item main-nav__item--btn">
+                            <a href="#" class="main-nav__link main-nav__link--btn">
+                                Get app
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="promo__content">
+                <img src="img/section-1/logo.png" class="promo__content-logo" width="209" height="209" title="Лого"
+                    alt="Лого">
+                <h3 class="promo__title">
+                    Helps you eat <span class="text-bold">better.</span>
+                </h3>
+                <p class="promo__text">
+                    FitApp is a free calorie counting and diet app PSD template which<br />
+                    includes high quality 9 screens. This template can be very helpful if you're<br />
+                    planning to build food tracking application.
+                </p>
+                <div class="promo__logo-section">
+                    <svg width="130" height="46" class="promo__logo promo__logo--appstore">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-apple"></use>
+                    </svg>
+                    <svg width="137" height="46" class="promo__logo promo__logo--appstore">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google"></use>
+                    </svg>
+                </div>
+                <img src="img/section-1/phone.png" width="1946" height="875" class="promo__content-img">
+                <div data-speed="70" class="promo__parallax promo__parallax--apple parallax parallax--apple"></div>
+                <div data-speed="50" class="promo__parallax promo__parallax--banana parallax parallax--banana"></div>
+                <div data-speed="40" class="promo__parallax promo__parallax--tomato parallax parallax--tomato"></div>
+                <div data-speed="15" class="promo__parallax promo__parallax--lilApple parallax parallax--lilApple">
+                </div>
             </div>
-        </footer>
-    </body
+        </div>
+    </section>
+    <div data-speed="10" class="promo__parallax promo__parallax--strawberry parallax parallax--strawberry"></div>
+    <section class="functionality">
+        <div class="site-wrapper">
+            <div class="functionality__circle functionality__circle--growth-checked">
+                <div class="functionality__img functionality__img--growth" alt="Growth-interface"></div>
+                <div class="functionality__item functionality__item--sound">
+                    <svg width="23" height="26" class="functionality__icon functionality__icon--sound">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-sound"></use>
+                    </svg>
+                </div>
+                <div class="functionality__item functionality__item--days">
+                    <svg width="26" height="28" class="functionality__icon functionality__icon--days">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-days"></use>
+                    </svg>
+                </div>
+                <div class="functionality__item functionality__item--growth">
+                    <svg width="36" height="36" class="functionality__icon functionality__icon--growth">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-growth"></use>
+                    </svg>
+                </div>
+                <div class="functionality__item functionality__item--favorite">
+                    <svg width="28" height="27" class="functionality__icon functionality__icon--favorite">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-favorite"></use>
+                    </svg>
+                </div>
+                <div class="functionality__item functionality__item--interface">
+                    <svg width="26" height="24" class="functionality__icon functionality__icon--interface">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-interface"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="functionality__text-block functionality__text-block--growth">
+                <h3 class="functionality__title">
+                    Best calorie <span class="text-green">counter app!</span>
+                </h3>
+                <p class="functionality__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br />
+                    sed do eiusmod tempor incididunt ut labore et dolore<br />
+                    <span class="functionality__text--spacing">magna aliqua. Ut enim ad minim veniam.</span>
+                </p>
+            </div>
+            <div
+                class="functionality__text-block functionality__text-block--sound functionality__text-block--sound--hidden">
+                <h3 class="functionality__title">
+                    Good <span class="text-green">vibrations!</span>
+                </h3>
+                <p class="functionality__text">
+                    Sed do eiusmod tempor incididunt ut labore et dolore,<br />
+                    lorem ipsum dolor sit amet, consectetur adipisicing elit,<br />
+                    <span class="functionality__text--spacing">magna aliqua. Ut enim ad minim veniam.</span>
+                </p>
+            </div>
+            <div
+                class="functionality__text-block functionality__text-block--days functionality__text-block--days--hidden">
+                <h3 class="functionality__title">
+                    Groundhog <span class="text-green">Day</span>
+                </h3>
+                <p class="functionality__text">
+                    Ut enim do eiusmod tempor consectetur adipisicing elit,<br />
+                    incididunt ut labore et dolore, lorem ipsum dolor sit amet, <br />
+                    <span class="functionality__text--spacing">magna aliqua. Sed ad minim veniam.</span>
+                </p>
+            </div>
+            <div
+                class="functionality__text-block functionality__text-block--favorite functionality__text-block--favorite--hidden">
+                <h3 class="functionality__title">
+                    The <span class="text-green">Matrix</span>
+                </h3>
+                <p class="functionality__text">
+                    Sed do eiusmod tempor incididunt ut labore et dolore,<br />
+                    incididunt ut labore et dolore, lorem ipsum dolor sit amet, <br />
+                    <span class="functionality__text--spacing">magna aliqua. Ut enim ad minim veniam.</span>
+                </p>
+            </div>
+            <div
+                class="functionality__text-block functionality__text-block--interface functionality__text-block--interface--hidden">
+                <h3 class="functionality__title">
+                    Ready <span class="text-green">Player One</span>
+                </h3>
+                <p class="functionality__text">
+                    Sed do eiusmod tempor incididunt ut labore et dolore,<br />
+                    sed do eiusmod tempor incididunt ut labore et dolore<br />
+                    <span class="functionality__text--spacing">magna aliqua. Ut enim ad minim veniam.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="planning">
+        <div class="site-wrapper">
+            <h3 class="planning__title">
+                A simple way to <span class="text-green">plan your diet!</span>
+            </h3>
+            <p class="planning__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et<br />
+                dolore magna aliqua. Ut enim ad minim veniam.
+            </p>
+            <img src="img/section-3/phone-left.png" width="332" height="588" class="planning__img planning__img--left">
+            <img src="img/section-3/phone-middle.png" width="443" height="784"
+                class="planning__img planning__img--middle">
+            <img src="img/section-3/phone-right.png" width="332" height="588"
+                class="planning__img planning__img--right">
+            <div data-speed="30" class="planning__parallax planning__parallax--pepper parallax parallax--pepper"></div>
+            <div data-speed="70" class="planning__parallax planning__parallax--apple parallax parallax--apple"></div>
+            <div data-speed="50" class="planning__parallax planning__parallax--banana parallax parallax--banana"></div>
+            <div data-speed="10"
+                class="planning__parallax planning__parallax--strawberry parallax parallax--strawberry"></div>
+        </div>
+    </section>
+    <section class="managment">
+        <div class="site-wrapper">
+            <div class="managment__text-block">
+                <h3 class="managment__title">
+                    Manage your <span class="text-green">meal time</span>
+                </h3>
+                <p class="managment__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br />
+                    sed do eiusmod tempor incididunt ut labore et dolore<br />
+                    <span class="managment__text--spacing">magna aliqua. Ut enim ad minim veniam.</span>
+                </p>
+            </div>
+            <div class="managment__slider-block">
+                <div class="managment__slide managment__slide--apple managment__slide--top"
+                    id="managment__slide--apple">
+                    <img class="managment__slider-img  managment__slider-img--apple" src="img/section-4/apples.png"
+                        width="95" height="56" alt="apples">
+                    <div class="managment__slider-text-block">
+                        <p class="managment__slider-title">
+                            Apple
+                        </p>
+                        <p class="managment__slider-text">
+                            Lorem ipsum dolor sit
+                        </p>
+                        <p class="managment__slider-stat">
+                            35 G&ensp; <span class="text-grey">&bull;</span>&ensp;189 kcal
+                        </p>
+                    </div>
+                    <div class="managment__slider-time">
+                        01:00<br />
+                        <span class="managment__slider-time-meridiem">
+                            pm
+                        </span>
+                    </div>
+                </div>
+                <div class="managment__slide managment__slide--sandwich managment__slide--middle"
+                    id="managment__slide--sandwich">
+                    <img class="managment__slider-img managment__slider-img--sandwich" src="img/section-4/sandwich.png"
+                        width="138" height="102" alt="sandwich">
+                    <div class="managment__slider-text-block">
+                        <p class="managment__slider-title">
+                            Sandwich
+                        </p>
+                        <p class="managment__slider-text">
+                            Lorem ipsum dolor sit
+                        </p>
+                        <p class="managment__slider-stat">
+                            35 G&ensp; <span class="text-grey">&bull;</span>&ensp;189 kcal
+                        </p>
+                    </div>
+                    <div class="managment__slider-time">
+                        03:00<br />
+                        <span class="managment__slider-time-meridiem">
+                            pm
+                        </span>
+                    </div>
+                </div>
+                <div class="managment__slide managment__slide--salad managment__slide--bottom"
+                    id="managment__slide--salad">
+                    <img class="managment__slider-img managment__slider-img--salad" src="img/section-4/salad.png"
+                        width="112" height="62" alt="salad">
+                    <div class="managment__slider-text-block">
+                        <p class="managment__slider-title">
+                            Salad with chicken
+                        </p>
+                        <p class="managment__slider-text">
+                            Lorem ipsum dolor sit
+                        </p>
+                        <p class="managment__slider-stat">
+                            220 G&ensp; <span class="text-grey">&bull;</span>&ensp;189 kcal
+                        </p>
+                    </div>
+                    <div class="managment__slider-time">
+                        05:30<br />
+                        <span class="managment__slider-time-meridiem">
+                            pm
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="site-wrapper">
+            <h3 class="main-footer__title">
+                Download, customize & <span class="text-bold">enjoy!</span>
+            </h3>
+            <p class="main-footer__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et<br />
+                <span class="main-footer__text--spaced">dolore magna aliqua. Ut enim ad minim veniam.</span>
+            </p>
+            <a href="#" class="main-footer__btn">
+                Get app
+            </a>
+            <div data-speed="40" class="main-footer__parallax main-footer__parallax--tomato parallax parallax--tomato">
+            </div>
+            <div data-speed="30" class="main-footer__parallax main-footer__parallax--pepper parallax parallax--pepper">
+            </div>
+            <div data-speed="10"
+                class="main-footer__parallax main-footer__parallax--strawberry parallax parallax--strawberry"></div>
+            <div data-speed="50" class="main-footer__parallax main-footer__parallax--banana parallax parallax--banana">
+            </div>
+            <div data-speed="70" class="main-footer__parallax main-footer__parallax--apple parallax parallax--apple">
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <script src="js/script-1.js"></script>
+    <script src="js/script-2.js"></script>
+    <script src="js/script-3.js"></script>
+    <script>
+    </script>
+</body>
+
 </html>
